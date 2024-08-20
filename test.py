@@ -9,11 +9,11 @@ receiver_email = "prathambaliyan012@gmail.com"
 smtp_server = "smtp.gmail.com"
 smtp_port = 587
 smtp_username = "Shourywardhan24@gmail.com"
-smtp_password = "ozfsvokg qgbn  esq"
+smtp_password = "bsod iqqx jrrr tqeq"
 
 def send_error_email(stage_name, error_log, recipient_email):
     sender_email = "shourywardhan24@gmail.com"
-    sender_password = "ozfsvokg qgbn  esqk"
+    sender_password = "bsod iqqx jrrr tqeq"
     
     subject = f"Jenkins Pipeline Error in Stage: {stage_name}"
     body = f"""
