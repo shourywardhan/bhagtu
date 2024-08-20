@@ -26,7 +26,7 @@ def send_error_email(stage_name, error_log, recipient_email):
     
     # Send the email
     try:
-        server = smtplib.SMTP('smtp.example.com', 587)
+        server = smtplib.SMTP('smtp.gmail.com', 587)
         server.starttls()
         server.login(sender_email, sender_password)
         text = msg.as_string()
