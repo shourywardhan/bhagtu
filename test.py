@@ -3,6 +3,14 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
+
+sender_email = "Shourywardhan24@gmail.com"
+receiver_email = "prathambaliyan012@gmail.com"
+smtp_server = "smtp.gmail.com"
+smtp_port = 587
+smtp_username = "Shourywardhan24@gmail.com"
+smtp_password = "ozfsvokg qgbn  esq"
+
 def send_error_email(stage_name, error_log, recipient_email):
     sender_email = "shourywardhan24@gmail.com"
     sender_password = "ozfsvokg qgbn  esqk"
@@ -26,15 +34,16 @@ def send_error_email(stage_name, error_log, recipient_email):
     
     # Send the email
     try:
-        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server = smtplib.SMTP(smtp_server, smtp_port)
         server.starttls()
-        server.login(sender_email, sender_password)
+        server.login(smtp_username, smtp_password)
         text = msg.as_string()
-        server.sendmail(sender_email, recipient_email, text)
+        server.sendmail(sender_email, receiver_email, text)
         server.quit()
-        print(f"Error email sent to {recipient_email}")
+        print("Error report sent successfully")
     except Exception as e:
-        print(f"Failed to send email. Error: {str(e)}")
+        print(f"Failed to send email: {e}")
+
 
 if __name__ == "__main__":
     # These environment variables will be set by Jenkins
