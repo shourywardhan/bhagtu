@@ -28,7 +28,7 @@ def send_error_email(stage_name, error_log, recipient_email):
     # Create the email message
     msg = MIMEMultipart()
     msg['From'] = sender_email
-    msg['To'] = recipient_email
+    msg['To'] = receiver_email
     msg['Subject'] = subject
     msg.attach(MIMEText(body, 'plain'))
     
@@ -50,7 +50,7 @@ if __name__ == "__main__":
     stage_name = os.getenv('STAGE_NAME', 'Unknown Stage')
     build_status = os.getenv('BUILD_STATUS', 'UNKNOWN')
     error_log = os.getenv('ERROR_LOG', 'No error log available')
-    recipient_email = os.getenv('DEVELOPER_EMAIL', 'prathambaliyan012@gmail.com')
+    receiver_email = os.getenv('DEVELOPER_EMAIL', 'prathambaliyan012@gmail.com')
     
     if build_status == "FAILURE":
-        send_error_email(stage_name, error_log, recipient_email)
+        send_error_email(stage_name, error_log, receiver_email)
