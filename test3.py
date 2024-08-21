@@ -15,7 +15,7 @@ def parse_build_output(build_output):
     }
 def send_email(summary, developer_emails):
     smtp_server = "smtp.gmail.com"
-    smtp_port = 587
+    smtp_port = 465
     smtp_username = "shourywardhan24@gmail.com"
     smtp_password = "bvzt frsz xnxq vkbq"
     from_email = smtp_username
