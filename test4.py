@@ -32,7 +32,7 @@ def send_error_email(stage_name, error_log, recipient_email, sender_email, smtp_
     except Exception as e:
         print(f"Failed to send email: {e}")
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     # Simulate fetching error log and other details from Jenkins
     stage_name = os.getenv('STAGE_NAME', 'Unknown Stage')
     error_log = os.getenv('ERROR_LOG', 'No error log available')
