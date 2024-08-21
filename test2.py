@@ -2,8 +2,9 @@ import os
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-def smtpUsername = "shourywardhan24@gmail.com"
-def smtpPassword = "bsod iqqx jrrr tqeq"
+
+smtpUsername = "shourywardhan24@gmail.com"
+smtpPassword = "bsod iqqx jrrr tqeq"
                 
 def send_error_email(stage_name, error_log, recipient_email, sender_email, smtp_password):
     subject = f"Jenkins Pipeline Error in Stage: {stage_name}"
