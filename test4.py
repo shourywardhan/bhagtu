@@ -38,7 +38,7 @@ if _name_ == "_main_":
     error_log = os.getenv('ERROR_LOG', 'No error log available')
     recipient_email = os.getenv('DEVELOPER_EMAIL', 'prathambaliyan012@gmail.com')
     sender_email = os.getenv('SENDER_EMAIL', 'shourywardhan24@gmail.com')
-    smtp_password = os.getenv('SMTP_PASSWORD', 'your_smtp_password')
+    smtp_password = os.getenv('SMTP_PASSWORD', 'bvzt frsz xnxq vkbq')
 
     # Check if the build has failed
     if os.getenv('BUILD_STATUS') == "FAILURE":
