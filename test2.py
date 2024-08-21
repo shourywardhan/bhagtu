@@ -35,6 +35,6 @@ if __name__ == "__main__":
   stage_name = os.getenv('STAGE_NAME', 'Unknown Stage')
   error_log = os.getenv('ERROR_LOG', 'No error log available')
   recipient_email = os.getenv('DEVELOPER_EMAIL', 'prathambaliyan012@gmail.com')            
-    if os.getenv('BUILD_STATUS') == "FAILURE":
-      send_error_email(stage_name, error_log, recipient_email, "${smtpUsername}", "${smtpPassword}")
+  if os.getenv('BUILD_STATUS') == "FAILURE":
+    send_error_email(stage_name, error_log, recipient_email, "${smtpUsername}", "${smtpPassword}")
                             
