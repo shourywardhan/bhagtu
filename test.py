@@ -13,7 +13,7 @@ smtp_password = "bsod iqqx jrrr tqeq"
 
 def send_error_email(stage_name, error_log, recipient_email):
     sender_email = "shourywardhan24@gmail.com"
-    sender_password = "bsod iqqx jrrr tqeq"
+    smtp_password = "bsod iqqx jrrr tqeq"
     
     subject = f"Jenkins Pipeline Error in Stage: {stage_name}"
     body = f"""
