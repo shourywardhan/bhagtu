@@ -4,11 +4,11 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 
-sender_email = "Shourywardhan24@gmail.com"
+sender_email = "shourywardhan24@gmail.com"
 receiver_email = "prathambaliyan012@gmail.com"
 smtp_server = "smtp.gmail.com"
 smtp_port = 587
-smtp_username = "Shourywardhan24@gmail.com"
+smtp_username = "shourywardhan24@gmail.com"
 smtp_password = "bsod iqqx jrrr tqeq"
 
 def send_error_email(stage_name, error_log, recipient_email):
