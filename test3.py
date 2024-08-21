@@ -17,7 +17,7 @@ def send_email(summary, developer_emails):
     smtp_server = "smtp.gmail.com"
     smtp_port = 587
     smtp_username = "shourywardhan24@gmail.com"
-    smtp_password = "bsod iqqx jrrr tqeq"
+    smtp_password = "bvzt frsz xnxq vkbq"
     from_email = smtp_username
     to_emails = developer_emails
     subject = f"Jenkins Build Summary: {summary['build_status']}"
