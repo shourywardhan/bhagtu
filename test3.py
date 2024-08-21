@@ -21,15 +21,28 @@ def send_email(summary, developer_emails):
     from_email = smtp_username
     to_emails = developer_emails
     subject = f"Jenkins Build Summary: {summary['build_status']}"
+    
+    # Include error details in the email body if an error occurred
     body = f"""
     Hello Team,
+    
     Here is the summary of the latest Jenkins build:
+    
     Total Tests: {summary['total_tests']}
     Total Failures: {summary['total_failures']}
     Build Status: {summary['build_status']}
-    Best Regards,
-    Jenkins Automation
     """
+    
+    if error_message:
+        body += f"""
+        
+        An error occurred during the Jenkins pipeline execution:
+        
+        Error Message:
+        {error_message}
+        """
+    
+    body += "\nBest Regards,\nJenkins Automation"
     msg = MIMEMultipart()
     msg['From'] = from_email
     msg['To'] = ", ".join(to_emails)
