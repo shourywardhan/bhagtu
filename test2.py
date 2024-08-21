@@ -1,13 +1,10 @@
+import os
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 def smtpUsername = "shourywardhan24@gmail.com"
 def smtpPassword = "bsod iqqx jrrr tqeq"
                 
-// Call the Python script to send an email
-def pythonScript = 
-    import os
-    import smtplib
-    from email.mime.text import MIMEText
-    from email.mime.multipart import MIMEMultipart
-
 def send_error_email(stage_name, error_log, recipient_email, sender_email, smtp_password):
     subject = f"Jenkins Pipeline Error in Stage: {stage_name}"
     body = f'''
